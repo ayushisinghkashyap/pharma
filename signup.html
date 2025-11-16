@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sign up for Advanced Pharma AI - Join our platform for pharmaceutical AI solutions" />
+  <title>Sign Up - Advanced Pharma AI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
+
+    :root {
+      --primary-glow: #00e6ff;
+      --secondary-glow: #4dffff;
+      --accent-glow: #19a9f1;
+      --dark-bg: #001a2e;
+      --form-bg: rgba(0, 20, 40, 0.8);
+      --text-color: #ffffff;
+      --error-color: #ff4d4d;
+      --success-color: #4dff88;
+      --focus-outline: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at center, #001a2e 0%, #000a14 100%);
+      font-family: 'Rajdhani', sans-serif;
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    /* Main Container */
+    .container {
+      background: var(--form-bg);
+      padding: 2.5rem 2rem;
+      border-radius: 25px;
+      box-shadow:
+        0 0 30px var(--primary-glow),
+        0 0 60px var(--accent-glow),
+        inset 0 0 30px rgba(0, 230, 255, 0.3);
+      width: 100%;
+      max-width: 450px;
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 20;
+      border: 1px solid rgba(0, 230, 255, 0.5);
+      animation: containerGlowPulse 6s infinite alternate;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:focus-within {
+      box-shadow:
+        0 0 40px var(--primary-glow),
+        0 0 80px var(--accent-glow),
+        inset 0 0 40px rgba(0, 230, 255, 0.5);
+    }
+
+    @keyframes containerGlowPulse {
+      0% {
+        box-shadow:
+          0 0 20px var(--primary-glow),
+          0 0 40px var(--accent-glow),
+          inset 0 0 20px rgba(0, 230, 255, 0.3);
+      }
+      100% {
+        box-shadow:
+          0 0 35px var(--primary-glow),
+          0 0 70px var(--accent-glow),
+          inset 0 0 35px rgba(0, 230, 255, 0.5);
+      }
+    }
+
+    /* Cybernetic Heading */
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: var(--primary-glow);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      text-shadow:
+        0 0 5px var(--primary-glow),
+        0 0 10px var(--primary-glow);
+      letter-spacing: 2px;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    label {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--secondary-glow);
+      font-weight: 500;
+    }
+
+    .input-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: rgba(0, 40, 80, 0.6);
+      border: 1px solid var(--primary-glow);
+      border-radius: 8px;
+      color: var(--text-color);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--secondary-glow);
+      box-shadow: 0 0 10px var(--primary-glow);
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Focus indicator for accessibility */
+    input:focus-visible {
+      outline: 2px solid var(--focus-outline);
+      outline-offset: 2px;
+    }
+
+    /* Button styles */
+    .button-wrapper {
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background: linear-gradient(to right, #0088cc, #00aaff);
+      border: none;
+      border-radius: 8px;
+      color: var(--text-color);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #00aaff, #00ccff);
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    button:focus {
+      outline: 2px solid var(--focus-outline);
+      outline-offset: 2px;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    /* Animated border for button */
+    button::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, 
+        var(--primary-glow) 0%, 
+        transparent 50%, 
+        var(--primary-glow) 100%);
+      z-index: -1;
+      border-radius: 10px;
+      animation: borderAnimate 3s linear infinite;
+    }
+
+    @keyframes borderAnimate {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+
+    /* Loading spinner */
+    .spinner-container {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 10, 20, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 25px;
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spinner {
+      width: 70px;
+      height: 70px;
+      border: 4px solid rgba(0, 230, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--primary-glow);
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Error message */
+    #errorMessage {
+      color: var(--error-color);
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      background: rgba(255, 70, 70, 0.1);
+      display: none;
+    }
+
+    #errorMessage.visible {
+      display: block;
+    }
+
+    /* Success message */
+    #successMessage {
+      color: var(--success-color);
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      background: rgba(70, 255, 70, 0.1);
+      display: none;
+    }
+
+    #successMessage.visible {
+      display: block;
+    }
+
+    /* Form validation visuals */
+    .input-error {
+      border-color: var(--error-color) !important;
+    }
+
+    .error-text {
+      color: var(--error-color);
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    .error-text.visible {
+      display: block;
+    }
+
+    /* Already registered link */
+    p {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+    }
+
+    a {
+      color: var(--primary-glow);
+      text-decoration: none;
+      transition: all 0.3s;
+      position: relative;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-shadow: 0 0 5px var(--primary-glow);
+    }
+
+    a:focus {
+      outline: 2px solid var(--focus-outline);
+      outline-offset: 2px;
+    }
+
+    /* Authentication badge */
+    .auth-badge {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background: linear-gradient(45deg, #004466, #006699);
+      color: #e0ffff;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px var(--primary-glow);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      user-select: none;
+      z-index: 30;
+    }
+
+    /* Password strength meter */
+    .password-strength {
+      display: flex;
+      margin-top: 0.5rem;
+      height: 5px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .strength-segment {
+      flex: 1;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      margin-right: 3px;
+      transition: background 0.3s;
+    }
+
+    .strength-segment:last-child {
+      margin-right: 0;
+    }
+
+    .strength-text {
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      color: rgba(255, 255, 255, 0.7);
+      display: none;
+    }
+
+    .strength-text.visible {
+      display: block;
+    }
+
+    /* Background particle effects */
+    #particleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      button {
+        font-size: 1rem;
+      }
+    }
+
+    /* Skip to content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-glow);
+      color: var(--dark-bg);
+      padding: 8px;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <main id="main-content" class="container" role="main">
+    <div class="auth-badge" aria-hidden="true">SECURE AUTH</div>
+    <h1>SIGN UP</h1>
+    <form id="signupForm" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <div class="input-container">
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            autocomplete="name" 
+            placeholder="Enter your full name" 
+            aria-required="true" 
+          />
+        </div>
+        <div id="nameError" class="error-text" aria-live="polite"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-container">
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            autocomplete="email" 
+            placeholder="Enter your email address" 
+            aria-required="true" 
+          />
+        </div>
+        <div id="emailError" class="error-text" aria-live="polite"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-container">
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            required 
+            autocomplete="new-password" 
+            placeholder="Create a secure password" 
+            aria-required="true" 
+          />
+        </div>
+        <div class="password-strength" aria-hidden="true">
+          <div class="strength-segment"></div>
+          <div class="strength-segment"></div>
+          <div class="strength-segment"></div>
+          <div class="strength-segment"></div>
+        </div>
+        <div id="passwordStrengthText" class="strength-text" aria-live="polite">Password strength: none</div>
+        <div id="passwordError" class="error-text" aria-live="polite"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-container">
+          <input 
+            type="password" 
+            id="confirmPassword" 
+            name="confirmPassword" 
+            required 
+            autocomplete="new-password" 
+            placeholder="Confirm your password" 
+            aria-required="true" 
+          />
+        </div>
+        <div id="confirmPasswordError" class="error-text" aria-live="polite"></div>
+      </div>
+
+      <div class="button-wrapper">
+        <button type="submit" id="submitButton">CREATE ACCOUNT</button>
+      </div>
+    </form>
+
+    <div id="errorMessage" role="alert"></div>
+    <div id="successMessage" role="alert"></div>
+
+    <p>Already registered? <a href="login.html">LOGIN TO SYSTEM</a></p>
+
+    <div class="spinner-container" aria-hidden="true">
+      <div class="spinner" role="progressbar" aria-label="Loading"></div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Form elements
+      const form = document.getElementById('signupForm');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+      const submitButton = document.getElementById('submitButton');
+      const errorMessage = document.getElementById('errorMessage');
+      const successMessage = document.getElementById('successMessage');
+      const spinnerContainer = document.querySelector('.spinner-container');
+      
+      // Error elements
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const passwordError = document.getElementById('passwordError');
+      const confirmPasswordError = document.getElementById('confirmPasswordError');
+      
+      // Password strength elements
+      const strengthSegments = document.querySelectorAll('.strength-segment');
+      const passwordStrengthText = document.getElementById('passwordStrengthText');
+
+      // Background particle system
+      initParticleSystem();
+
+      // Form validation
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Reset error states
+        resetErrors();
+        
+        // Validate inputs
+        let isValid = true;
+        
+        // Name validation
+        if (!nameInput.value.trim()) {
+          showError(nameInput, nameError, 'Please enter your full name');
+          isValid = false;
+        } else if (nameInput.value.trim().length < 3) {
+          showError(nameInput, nameError, 'Name must be at least 3 characters long');
+          isValid = false;
+        }
+        
+        // Email validation
+        if (!emailInput.value.trim()) {
+          showError(emailInput, emailError, 'Please enter your email address');
+          isValid = false;
+        } else if (!isValidEmail(emailInput.value)) {
+          showError(emailInput, emailError, 'Please enter a valid email address');
+          isValid = false;
+        }
+        
+        // Password validation
+        if (!passwordInput.value) {
+          showError(passwordInput, passwordError, 'Please create a password');
+          isValid = false;
+        } else if (passwordInput.value.length < 8) {
+          showError(passwordInput, passwordError, 'Password must be at least 8 characters long');
+          isValid = false;
+        }
+        
+        // Confirm password validation
+        if (!confirmPasswordInput.value) {
+          showError(confirmPasswordInput, confirmPasswordError, 'Please confirm your password');
+          isValid = false;
+        } else if (confirmPasswordInput.value !== passwordInput.value) {
+          showError(confirmPasswordInput, confirmPasswordError, 'Passwords do not match');
+          isValid = false;
+        }
+        
+        // If form is valid, submit
+        if (isValid) {
+          // Show loading spinner
+          spinnerContainer.style.display = 'flex';
+          
+          // Submit form data to backend
+          fetch('http://localhost:3001/api/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: nameInput.value.trim(),
+              email: emailInput.value.trim(),
+              password: passwordInput.value,
+              age: null
+            })
+          })
+          .then(response => response.json().then(data => ({ status: response.status, body: data })))
+          .then(({ status, body }) => {
+            spinnerContainer.style.display = 'none';
+            if (status === 201) {
+              successMessage.textContent = 'Account created successfully! Redirecting to dashboard...';
+              successMessage.classList.add('visible');
+              errorMessage.textContent = '';
+              errorMessage.classList.remove('visible');
+              // Save token to localStorage
+              localStorage.setItem('token', body.token);
+              // Redirect after 2 seconds
+              setTimeout(() => {
+                window.location.href = 'dashb.html';
+              }, 2000);
+            } else {
+              errorMessage.textContent = body.error || 'Failed to create account.';
+              errorMessage.classList.add('visible');
+              successMessage.textContent = '';
+              successMessage.classList.remove('visible');
+            }
+          })
+          .catch(error => {
+            spinnerContainer.style.display = 'none';
+            errorMessage.textContent = 'An error occurred. Please try again later.';
+            errorMessage.classList.add('visible');
+            successMessage.textContent = '';
+            successMessage.classList.remove('visible');
+            console.error('Signup error:', error);
+          });
+        } else {
+          // Show general error message
+          errorMessage.textContent = 'Please fix the errors and try again.';
+          errorMessage.classList.add('visible');
+          successMessage.textContent = '';
+          successMessage.classList.remove('visible');
+        }
+      });
+
+      // Helper functions
+      function showError(input, errorElement, message) {
+        input.classList.add('input-error');
+        errorElement.textContent = message;
+        errorElement.classList.add('visible');
+      }
+
+      function resetErrors() {
+        // Reset all input styles
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => input.classList.remove('input-error'));
+        
+        // Reset all error messages
+        const errorTexts = form.querySelectorAll('.error-text');
+        errorTexts.forEach(error => error.classList.remove('visible'));
+        
+        // Reset general error message
+        errorMessage.classList.remove('visible');
+        successMessage.classList.remove('visible');
+      }
+
+      function isValidEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      // Initialize the particle system
+      function initParticleSystem() {
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas dimensions
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        // Particle properties
+        const particles = [];
+        const particleCount = 50;
+        const particleColors = ['#00aeff', '#00ffaa', '#0088ff', '#00ddff'];
+        
+        // Create particles
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 2 + 1,
+            color: particleColors[Math.floor(Math.random() * particleColors.length)],
+            speedX: Math.random() * 0.5 - 0.25,
+            speedY: Math.random() * 0.5 - 0.25,
+            connections: []
+          });
+        }
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        });
+        
+        // Animation loop
+        function animate() {
+          requestAnimationFrame(animate);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          
+          // Update and draw particles
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            
+            // Update position
+            p.x += p.speedX;
+            p.y += p.speedY;
+            
+            // Wrap around edges
+            if (p.x < 0) p.x = canvas.width;
+            if (p.x > canvas.width) p.x = 0;
+            if (p.y < 0) p.y = canvas.height;
+            if (p.y > canvas.height) p.y = 0;
+            
+            // Draw particle
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.fill();
+            
+            // Find connections
+            p.connections = [];
+            for (let j = i + 1; j < particles.length; j++) {
+              const p2 = particles[j];
+              const dx = p2.x - p.x;
+              const dy = p2.y - p.y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              
+              if (distance < 100) {
+                p.connections.push({
+                  particle: p2,
+                  distance: distance
+                });
+              }
+            }
+            
+            // Draw connections
+            for (let c = 0; c < p.connections.length; c++) {
+              const connection = p.connections[c];
+              const opacity = 1 - connection.distance / 100;
+              
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(connection.particle.x, connection.particle.y);
+              ctx.strokeStyle = `rgba(0, 230, 255, ${opacity * 0.5})`;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+        }
+        
+        // Start animation
+        animate();
+      }
+    });
+  </script>
+</body>
+</html>
